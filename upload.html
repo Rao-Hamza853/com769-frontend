@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video - VideoSharer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-lg bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-center mb-6">Upload a New Video</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="title" class="block mb-2 text-sm font-medium">Title</label>
+                <input type="text" id="title" name="title" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5" required>
+            </div>
+            
+            <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-4 group">
+                    <label for="publisher" class="block mb-2 text-sm font-medium">Publisher</label>
+                    <input type="text" id="publisher" name="publisher" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5">
+                </div>
+                <div class="relative z-0 w-full mb-4 group">
+                    <label for="producer" class="block mb-2 text-sm font-medium">Producer</label>
+                    <input type="text" id="producer" name="producer" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5">
+                </div>
+            </div>
+             <div class="grid md:grid-cols-2 md:gap-6">
+                <div class="relative z-0 w-full mb-4 group">
+                    <label for="genre" class="block mb-2 text-sm font-medium">Genre</label>
+                    <input type="text" id="genre" name="genre" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5">
+                </div>
+                <div class="relative z-0 w-full mb-4 group">
+                    <label for="ageRating" class="block mb-2 text-sm font-medium">Age Rating (e.g., PG, 18)</label>
+                    <input type="text" id="ageRating" name="ageRating" class="bg-gray-700 border border-gray-600 text-white text-sm rounded-lg block w-full p-2.5">
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label for="video" class="block mb-2 text-sm font-medium">Video File</label>
+                <input type="file" id="video" name="video" accept="video/*" class="block w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" required>
+            </div>
+
+            <button type="submit" class="w-full text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Upload Video</button>
+        </form>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="upload.js"></script>
+</body>
+</html>
